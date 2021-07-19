@@ -1,4 +1,6 @@
 # -*- coding: utf-8 -*-
+from enum import Enum
+import numpy as np
 
 
 class State():
@@ -19,3 +21,8 @@ class State():
     def __eq__(self, other):
         return self.row == other.row and self.column == other.column
 
+class Action(Enum):
+    UP = 1
+    DOWN = -1
+    LEFT = 2
+    RIGHT = -2
